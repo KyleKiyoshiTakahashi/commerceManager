@@ -1,0 +1,13 @@
+<h1>New Product</h1>
+{{ nameErrorMessage | json }}
+{{ priceErrorMessage | json }}
+{{ qtyErrorMessage | json }}
+<div>
+<form (submit)="onNewProductSubmit()" >
+  <p>Name: <input type="text" name="newProduct.name" [(ngModel)]="newProduct.name"></p>
+  <p>Qty: <input type="number" name="newProduct.qty" [(ngModel)]="newProduct.qty"></p>
+  <p>Price: <input type="number" name="newProduct.price" [(ngModel)]= "newProduct.price"></p>
+  <input type="submit" value="Create">
+</form>
+<button class='btn' (click)='cancelCreate()'>Cancel</button>
+</div>

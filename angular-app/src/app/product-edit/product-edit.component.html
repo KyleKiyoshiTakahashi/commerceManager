@@ -1,0 +1,13 @@
+<h1>Update Product</h1>
+{{ nameErrorMessage | json }}
+{{ priceErrorMessage | json }}
+{{ qtyErrorMessage | json }}
+<div *ngIf="product">
+  <form (submit)='editProductSubmit()'>
+      Name : <input type="text"    name="product.name" [(ngModel)]="product.name"/>*<br/><br/>
+      Price :$ <input type="number"   name="product.price"[(ngModel)]="product.price"/>*<br/><br/>
+      Qty : <input type="text"   name="product.qty" [(ngModel)]="product.qty"/><br/><br/>
+     <input type="submit" value="UPDATE">
+     <button class='btn' (click)='cancelCreate()'>Cancel</button><br/><br/>
+  </form>
+</div>

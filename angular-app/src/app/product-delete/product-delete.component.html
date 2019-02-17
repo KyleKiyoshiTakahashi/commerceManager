@@ -1,0 +1,7 @@
+<h1>Product Details</h1>
+
+<p>Name:{{ product.name}}</p>
+<p>Qty: {{product.qty}}</p>
+<p>Price: ${{product.price}}</p>
+<button (click)='cancelCreate()'>Home</button>
+<button (click)='deleteProduct(product._id)'>DELETE</button>
